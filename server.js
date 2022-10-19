@@ -1,10 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 4000;
-const sikoyo = new Date();
-const heure   = sikoyo.getHours();
-const minute  = sikoyo.getMinutes();
-const seconde = sikoyo.getSeconds();
+
 
 app.get('/', (req, res) => {
 res.sendFile(__dirname + "/views/index.html");
