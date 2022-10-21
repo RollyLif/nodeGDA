@@ -1,9 +1,16 @@
 const express = require('express');
 const app = express();
+const port = 1706;
 
+//configuration ejs
+app.set('views','./views');
+app.set('view engine','ejs');
+
+//paramètres à transmettre à ma vue
+let message="je suis un Lifungula"
 
 app.get('/', (req, res) => {
-res.sendFile(__dirname + "/views/index.html");
+res.render('home', {message : message});
 });
 
 app.get('/about', (req, res) => {
